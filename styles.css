@@ -1,0 +1,83 @@
+/*------------EXTRAS---------*/
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: "Righteous", sans-serif;
+    font-size: 40px;
+    color: white;
+    
+}
+
+body {
+    background: url(pattern.png);
+    background-color:rgb(0, 0, 0);
+    background-size: 400px 400px;
+}
+/* Estilos del preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(50, 104, 155); /* Fondo del preloader */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background: url(pattern.png);
+    background-color:rgb(0, 0, 0);
+    background-size: 400px 400px;
+    transition: opacity 1s ease;
+}
+
+/* La barra de carga */
+#loader {
+    width: 10%;
+    height: 10px;
+    background-color: #6c3b2a; /* Barra de carga marron */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de líquido */
+#loader::before {
+    content: '';
+    position: absolute;
+    width: 100%; /* Ancho completo para el efecto líquido */
+    height: 100%;
+    background-color: white; /* Color de la parte que se llena */
+    animation: load 2s ease-in-out forwards; /* Animación que dura 2 segundos */
+    transform: translateX(-100%); /* Comienza fuera de la vista */
+}
+
+/* Animación para el crecimiento de la barra de carga */
+@keyframes load {
+    0% {
+        transform: translateX(-100%); /* Empieza fuera de la vista */
+    }
+    20% {
+        transform: translateX(-80%); /* Se "lucha" un poco, queda al 20% */
+    }
+    50% {
+        transform: translateX(0); /* Se mueve a la posición original (gana) */
+    }
+    100% {
+        transform: translateX(0); /* Mantiene el final en la posición */
+    }
+}
+
+/* Estilos del contenido que se muestra después del preloader */
+#content {
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fade-out {
+    opacity: 0;
+}

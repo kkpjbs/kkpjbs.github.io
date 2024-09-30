@@ -1,1 +1,46 @@
-jaja
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <title>KKPJ</title>
+</head>
+<body>
+    
+    <div id="conpre">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    </div>
+
+    <!-- Contenido de la página -->
+    <div id="content" style="display: none;">
+         <p>When you are lost in the darkness, look for the KKPJ</p>
+    </div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                // Agregar la clase 'fade-out' para iniciar la animación
+                document.getElementById('preloader').classList.add('fade-out');
+                
+                // Esperar a que la animación termine (1s en este caso) para ocultar el preloader
+                setTimeout(function() {
+                    document.getElementById('preloader').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                }, 1000); // Duración de la animación en milisegundos
+            }, 1000); // Esperar 1 segundo antes de iniciar el fadeout
+        };
+    </script>
+    
+    
+</body>
+</html>
+
