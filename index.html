@@ -1,58 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KKPJ</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cairo:wght@200..1000&family=Major+Mono+Display&display=swap" rel="stylesheet">
-    
-    
-    <style>
-        #kpj {
-            font-family: "Chakra Petch", sans-serif;
-        }
-        #kk {
-            font-family: "Bungee", sans-serif;
-        }
-        #synco {
-            font-family: "Cairo", system-ui;
-        }
-        #protocolk {
-            font-family: "Major Mono Display", monospace;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <title>KKPJ</title>
 </head>
 <body>
-    <div class="image-container">
-        <div  id="kpj" class="image-box">
-            <a href="keepersofthepixeljungle.html">
-                <img src="img/imagen1.jpg" alt="Keepers of the Pixel Jungle">
-                <div class="image-text">Keepers of the Pixel Jungle</div>
-            </a>
-        </div>
-        <div id="kk" class="image-box">
-            <a href="kerberoskeepers.html">
-                <img src="img/imagen2.jpg" alt="Kerberos Keepers">
-                <div class="image-text">Kerberos Keepers</div>
-            </a>
-        </div>
-        <div id="synco" class="image-box">
-            <a href="synco.html">
-                <img src="img/imagen3.jpg" alt="Sync-o">
-                <div class="image-text">Sync-o</div>
-            </a>
-        </div>
-        <div id="protocolk" class="image-box">
-            <a href="protocolk.html">
-                <img src="img/imagen4.jpg" alt="Protocol K">
-                <div class="image-text">Protocol K</div>
-            </a>
-        </div>
+    
+    <div id="conpre">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="loader"></div>
     </div>
+    </div>
+
+    <!-- Contenido de la página -->
+    <div id="content" style="display: none;">
+         <p>When you are lost in the darkness, look for the KKPJ</p>
+    </div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                // Agregar la clase 'fade-out' para iniciar la animación
+                document.getElementById('preloader').classList.add('fade-out');
+                
+                // Esperar a que la animación termine (1s en este caso) para ocultar el preloader
+                setTimeout(function() {
+                    document.getElementById('preloader').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                }, 1000); // Duración de la animación en milisegundos
+            }, 1000); // Esperar 1 segundo antes de iniciar el fadeout
+        };
+    </script>
+    
+    
 </body>
 </html>
+
