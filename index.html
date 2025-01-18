@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('PjmGCQSmwXZYf2qm9')
+</script>
+</head>
+<body>
+    <form id="form">
+        <div class="field">
+          <label for="to_name">Destinatario</label>
+          <input type="text" name="to_name" id="to_name">
+        </div>
+        <div class="field">
+          <label for="from_name">Origen</label>
+          <input type="text" name="from_name" id="from_name">
+        </div>
+        <div class="field">
+          <label for="message">Mensaje</label>
+          <input type="text" name="message" id="message">
+        </div>
+        <div class="field">
+          <label for="reply_to">Responder A:</label>
+          <input type="text" name="reply_to" id="reply_to">
+        </div>
+      
+        <input type="submit" id="button" value="Send Email" >
+      </form>
+      
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      
+      <script type="text/javascript">
+        emailjs.init('PjmGCQSmwXZYf2qm9')
+      </script>
+      <script src="prog.js"></script>
+</body>
+</html>
